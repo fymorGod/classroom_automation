@@ -166,6 +166,7 @@ class TestsPage(Lib):
         assert result is True
     
 
+<<<<<<< HEAD
     def ct_0011(self):
         #Verificação de sucesso no envio
         self.ct_0001('insira o usuário!', 'insira sua senha!')
@@ -202,6 +203,44 @@ class TestsPage(Lib):
         result = self.driver.find_element(*self.__ALERTA_ENVIO).is_enabled()
         
         assert result is True
+=======
+def ct_0011(self):
+    #Verificação de sucesso no envio
+    self.ct_0001('insira o usuário!', 'insira sua senha!')
+    self.click(self.__DISCIPLINA_TESTAGEM)
+    self.click(self.__AV_QUALIS)
+    self.click(self.__ADICIONAR_ENVIO)
+    self.click(self.__SALVAR_ENVIO)
+    result = self.driver.find_element(*self.__ALERTA_ENVIO).is_enabled()
+    assert result is False
+
+def ct_0012(self):
+    #Verificação de sucesso no envio
+    self.ct_0001('insira o usuário!', 'insira sua senha!')
+    self.click(self.__DISCIPLINA_TESTAGEM)
+
+    self.click(self.__ATV__TESTAGEM)
+    self.click(self.__ADICIONAR_ENVIO)
+    self.click(self.__SALVAR_ENVIO)
+    result = self.driver.find_element(*self.__ALERTA_ENVIO).is_enabled()
+
+    assert result is True
+
+def ct_0013(self):
+    #Verificação de sucesso no envio
+    self.ct_0001('insira o usuário!', 'insira sua senha!')
+    self.click(self.__DISCIPLINA_TESTAGEM)
+
+    self.click(self.__ATV__TESTAGEM)
+    self.click(self.__ADICIONAR_ENVIO)
+    self.click(self.__TEST_SEND_AGAIN)
+
+    self.click(self.__ADICIONAR_ENVIO)
+    self.click(self.__SALVAR_ENVIO)
+    result = self.driver.find_element(*self.__ALERTA_ENVIO).is_enabled()
+    
+    assert result is True
+>>>>>>> ee5dea99faa7c00b701bf87bdd02eb9e82493524
 
     def ct_0014(self):
         #Verificação de sucesso no envio
